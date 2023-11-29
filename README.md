@@ -1,6 +1,37 @@
 # www_lab_week6
 # Lab6 Spring Boot Project
+Họ tên: [Lê Thị Ngọc Mai]
 
+MSSV: [20005501]
+## Mô tả
+
+Dự án Spring Boot với
+
+## Yêu cầu
+
+Đảm bảo bạn đã cài đặt đầy đủ các thành phần sau:
+- Java Development Kit (JDK)
+- Maven
+- MariaDB
+
+## Công nghệ sử dụng
+
+- Spring Boot: Framework để xây dựng ứng dụng doanh nghiệp dựa trên Java.
+- MariaDB: Hệ thống quản lý cơ sở dữ liệu quan hệ.
+## Cấu hình application.properties:
+
+```properties
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://localhost:3306/week6
+spring.datasource.username=root
+spring.datasource.password=sapass
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+server.port=8082
+spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+```
 ## Các Package
 
 ### 1. Package "entity"
@@ -19,20 +50,7 @@
    - Chứa các lớp đảm nhiệm chuyển đổi dữ liệu như PostForm, UserForm.
 
 
-## Cấu hình application.properties:
 
-```properties
-spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
-spring.datasource.url=jdbc:mariadb://localhost:3306/week6
-spring.datasource.username=root
-spring.datasource.password=sapass
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-
-server.port=8082
-spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-```
 
 ## Chạy Ứng dụng
 
@@ -66,6 +84,26 @@ Tôi hoan nghênh sự đóng góp từ cộng đồng để cải thiện dự 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/DyEppoD.png)
 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/fEuXcbY.png)
+
+## Tài liệu liên quan
+
+- [Java EE Documentation](https://javaee.github.io/javaee-spec/)
+- [Java Database Connectivity (JDBC) Documentation](https://docs.oracle.com/en/java/javase/16/docs/api/java.sql/java/sql/package-summary.html)
+- [Apache Tomcat Documentation](https://tomcat.apache.org/tomcat-9.0-doc/index.html)
+- [Git Version Control](https://git-scm.com/book/en/v2)
+
+
+## Đóng góp
+
+Nếu bạn muốn đóng góp vào dự án hoặc báo cáo lỗi, vui lòng tạo issue hoặc gửi pull request vào repository GitHub của dự án.
+
+- GitHub Repository: [www_lab_week6](https://github.com/ngocmai1522k2/www_lab_week6)
+- Tạo issue mới: [Tạo issue](https://github.com/ngocmai1522k2/www_lab_week6/issues/new)
+- Gửi pull request: [Gửi pull request](https://github.com/ngocmai1522k2/www_lab_week6/compare)
+
+Chúng tôi rất hoan nghênh mọi đóng góp từ cộng đồng!
+
+---
 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/Yx199cA.png)
 
