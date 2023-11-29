@@ -72,12 +72,13 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
 Tôi hoan nghênh sự đóng góp từ cộng đồng để cải thiện dự án này.
 
 ## Chạy ứng dụng
-
-![Ảnh mô tả sản phẩm](https://i.imgur.com/rGLZIgi.png)
+1. **Trang chủ**
+![image](https://github.com/ngocmai1522k2/www_lab_week6/assets/144517477/1c4bc16e-4cbc-4a31-beae-b1a4afe25aaf)
+2. **Trang đăng ký**
+![image](https://github.com/ngocmai1522k2/www_lab_week6/assets/144517477/47c5c2ef-2bb3-43fa-957b-fe494783f6ee)
+3. **Trang đăng nhập**
 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/wtzOXPc.png)
-
-![Ảnh mô tả sản phẩm](https://i.imgur.com/3ljBjh3.png)
 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/m7vLMM8.png)
 
