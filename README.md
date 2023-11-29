@@ -24,13 +24,13 @@ Dự án Spring Boot với
 
 ```properties
 spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
-spring.datasource.url=jdbc:mariadb://localhost:3306/week6
+spring.datasource.url=jdbc:mariadb://localhost:3306/lab6
 spring.datasource.username=root
-spring.datasource.password=sapass
+spring.datasource.password=20005501
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 
-server.port=8082
+server.port=8088
 spring.jpa.hibernate.naming.implicit-strategy=org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
 spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 ```
@@ -57,7 +57,7 @@ spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.Ph
 ## Chạy Ứng dụng
 
 - Chạy class `Lab6Application` để khởi động ứng dụng Spring Boot. 
-- Sau đó, truy cập http://localhost:8082 để xem kết quả.
+- Sau đó, truy cập http://localhost:8088 để xem kết quả.
 
 ## Lưu ý
 
