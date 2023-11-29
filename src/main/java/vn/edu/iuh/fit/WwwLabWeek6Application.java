@@ -1,12 +1,11 @@
-package vn.edu.iuh.fit.www_lab_week6;
+package vn.edu.iuh.fit;
 
 import org.springframework.boot.SpringApplication;
 		import org.springframework.boot.autoconfigure.SpringBootApplication;
 		import org.springframework.context.ConfigurableApplicationContext;
-		import vn.edu.iuh.fit.dao.PostDao;
-		import vn.edu.iuh.fit.dao.UserDao;
-		import vn.edu.iuh.fit.entity.Post;
-		import vn.edu.iuh.fit.entity.User;
+import vn.edu.iuh.fit.dao.PostDao;
+import vn.edu.iuh.fit.dao.UserDao;
+import vn.edu.iuh.fit.entity.User;
 
 @SpringBootApplication
 public class WwwLabWeek6Application {
@@ -22,7 +21,7 @@ public class WwwLabWeek6Application {
 //        System.out.println(postDao.deletePost(31));
 //        System.out.println(postDao.activePost(31));
 //        postDao.getAllPostByUser(30).forEach(p->System.out.println(p.toString()));
-		System.out.println(postDao.getPost(31));
+//		System.out.println(postDao.getPost(31));
 
 
 	}
