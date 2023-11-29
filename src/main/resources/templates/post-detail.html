@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title th:text="${post.getTitle()}">Post Detail</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .post-details {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .post-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .post-meta-title {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .post-info {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .author-info {
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .btn-back {
+            margin-top: 20px;
+        }
+        .comment {
+            border-bottom: 1px solid #ddd; /* Thêm đường viền giữa các comment */
+            padding-bottom: 10px; /* Khoảng cách giữa các comment */
+        }
+
+        .comment-content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .comment-info {
+            color: #888;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .comment-date {
+            color: #888;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container post-details">
+    <div class="post-title" th:text="${post.getTitle()}">Post Title</div>
+    <div class="post-meta-title" th:text="${post.getMetaTitle()}">Post Meta Title</div>
+    <div class="post-info">
+        <p th:text="'Created at: '+${#temporals.format(post.getCreatedAt(), 'dd/MM/yyyy HH:mm:ss')}"></p>
+        <p th:if="${post.getPublished() == 1}" th:text="'Published at: '+${#temporals.format(post.getPublishedAt(), 'dd/MM/yyyy HH:mm:ss')}"></p>
+        <p th:if="${post.getPublished() == 0}">Bài đăng chưa được public</p>
+        <p th:if="${post.getUpdatedAt() != null}" th:text="'Updated at: '+${#temporals.format(post.getUpdatedAt(), 'dd/MM/yyyy HH:mm:ss')}"></p>
+    </div>
+    <div class="content" th:text="${post.getContent()}">Content: </div>
+    <div class="author-info" th:text="'Tác giả: '+${post.getAuthor().getLastName()}+' '+${post.getAuthor().getMidName()}+' '+${post.getAuthor().getFirstName()}"></div>
+    <a th:if="${post.getParent() !=null}" th:href="@{'/post/'+${post.getParent().getPostID()}}" class="btn btn-info btn-back">Xem bài gốc</a>
+<!--    <a th:href="@{'/mypost/' + ${post.getAuthor().getUid()}}" class="btn btn-secondary btn-back">Quay lại My Posts</a>-->
+
+    <!-- Hiển thị danh sách comment -->
+    <div class="comments mt-4">
+            <h4>Bình luận:</h4>
+            <div th:each="comment : ${comments}" class="comment">
+                <div class="comment-content" th:text="${comment.getContent()}"></div>
+                <div class="comment-info"
+                     th:text="'Bởi: '+${comment.getUser().getLastName()}+' '+${comment.getUser().getMidName()}+' '+${comment.getUser().getFirstName()}"></div>
+                <div class="comment-date"
+                     th:text="'Date: '+${#temporals.format(comment.getCreatedAt(), 'dd/MM/yyyy HH:mm:ss')}"></div>
+            </div>
+    </div>
+
+</div>
+
+<!-- Add Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

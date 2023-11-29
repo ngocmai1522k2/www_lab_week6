@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bài đăng của tôi</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Bài đăng của tôi</h2>
+        <a th:href="@{'/allpost/'+${UID}}" class="btn btn-dark">Trang chủ</a>
+        <a th:href="@{'/create-post/'+${UID}}" class="btn btn-success">Thêm bài đăng</a>
+    </div>
+
+    <p th:if="${posts==null||posts.size()==0}" th:text="'Bạn chưa viết bài đăng nào'"></p>
+
+    <div th:each="post : ${posts}">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h3 th:text="${post.getTitle()}"></h3>
+            </div>
+            <div class="card-body">
+                <p th:text="${post.getSummary()}"></p>
+                <p th:if="${post.getPublished() == 1}" th:text="'Đã đăng'"></p>
+                <a th:href="@{'/post/' + ${post.getPostID()}}" class="btn btn-primary">Read more</a>
+                <a th:href="@{'/update-post/'+${post.getAuthor().getUid()}+'/' + ${post.getPostID()}}" class="btn btn-warning">Sửa</a>
+                <a th:href="@{'/delete-post/'+${post.getAuthor().getUid()}+'/' + ${post.getPostID()}}" class="btn btn-danger">Xóa</a>
+                <a th:href="@{'/active-post/'+${post.getAuthor().getUid()}+'/' + ${post.getPostID()}}" class="btn btn-info">Publish</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

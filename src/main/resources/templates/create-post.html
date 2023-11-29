@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bài đăng</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Tạo bài đăng</h2>
+    <form th:action="@{/create-post}" method="post" >
+        <div class="form-group">
+            <label for="uid">Id Người dùng:</label>
+            <input type="text" class="form-control" id="uid" name="uid" th:value="${UID}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="postID">Id Bài đăng:</label>
+            <input type="text" class="form-control" id="postID" name="postID" >
+        </div>
+        <div class="form-group">
+            <label for="title">Tiêu đề:</label>
+            <input type="text" class="form-control" id="title" name="title" >
+        </div>
+        <div class="form-group">
+            <label for="metaTitle">Tiêu đề phụ:</label>
+            <input type="text" class="form-control" id="metaTitle" name="metaTitle" >
+        </div>
+        <div class="form-group">
+            <label for="summary">Tóm tắt:</label>
+            <textarea class="form-control" id="summary" name="summary" rows="5" ></textarea>
+        </div>
+        <div class="form-group">
+            <label for="content">Nội dung:</label>
+            <textarea class="form-control" id="content" name="content" rows="15" ></textarea>
+        </div>
+        <div class="form-group">
+            <label for="published">Chế độ:</label>
+            <select class="form-control" id="published" name="published" >
+                <option value="0" >PRIVATE</option>
+                <option value="1" >PUBLIC</option>
+            </select>
+        </div>
+        <input type="hidden" name="parentID" th:if="${parentID!=null}" th:value="${parentID}" />
+        <button type="submit" class="btn btn-success">Hoàn thành</button>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
