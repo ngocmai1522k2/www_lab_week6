@@ -84,6 +84,8 @@ Tôi hoan nghênh sự đóng góp từ cộng đồng để cải thiện dự 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/DyEppoD.png)
 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/fEuXcbY.png)
+![Ảnh mô tả sản phẩm](https://i.imgur.com/Yx199cA.png)
+
 
 ## Tài liệu liên quan
 
@@ -102,12 +104,5 @@ Nếu bạn muốn đóng góp vào dự án hoặc báo cáo lỗi, vui lòng t
 - Gửi pull request: [Gửi pull request](https://github.com/ngocmai1522k2/www_lab_week6/compare)
 
 Chúng tôi rất hoan nghênh mọi đóng góp từ cộng đồng!
-
----
-
-![Ảnh mô tả sản phẩm](https://i.imgur.com/Yx199cA.png)
-
-
-
 
 ---
