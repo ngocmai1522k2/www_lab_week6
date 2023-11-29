@@ -84,10 +84,7 @@ Tôi hoan nghênh sự đóng góp từ cộng đồng để cải thiện dự 
 
 ![Ảnh mô tả sản phẩm](https://i.imgur.com/NBFWYc0.png)
 
-![Ảnh mô tả sản phẩm](https://i.imgur.com/DyEppoD.png)
 
-![Ảnh mô tả sản phẩm](https://i.imgur.com/fEuXcbY.png)
-![Ảnh mô tả sản phẩm](https://i.imgur.com/Yx199cA.png)
 
 
 ## Tài liệu liên quan
